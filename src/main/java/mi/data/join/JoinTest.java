@@ -5,6 +5,8 @@ public class JoinTest {
         ThreadJoinTest t1 = new ThreadJoinTest("小明");
         ThreadJoinTest t2 = new ThreadJoinTest("小东");
         t1.start();
+        System.out.println(t1.getState());
+        System.out.println(t2.getState());
         /**
          * join方法可以传递参数，join(10)表示main线程会等待t1线程10毫秒，10毫秒过去后，
          * main线程和t1线程之间执行顺序由串行执行变为普通的并行执行
